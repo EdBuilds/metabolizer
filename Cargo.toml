@@ -1,0 +1,23 @@
+[package]
+name = "metabolizer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "myfitnesspal_client"
+path = "src/myfitnesspal_client.rs"
+
+[[bin]]
+name = "metabolizer"
+path = "src/main.rs" # replace bin.rs with name of your file
+
+[dependencies]
+futures = "0.3.25"
+tokio = "1.22.0"
+env_logger = "0.9.0"
+
+[dependencies.bluer]
+version = "*"
+features = ["bluetoothd", "default"]
